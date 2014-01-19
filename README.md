@@ -1,0 +1,1 @@
+Working on this sample Ember.js project, I have become more and more entranced.  I see why its logical conventions apply to meaty problems.

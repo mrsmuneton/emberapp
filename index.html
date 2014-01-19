@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Voting Fun</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    <h2>Vote Counting</h2>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="decisions">
+      {{input type="text" id="new-decision" placeholder="Enter a voting topic."
+      value=newTitle action="createDecision"}}
+      <ul>
+          {{#each itemController="decision"}}
+              <li {{bind-attr class="isEditing:editing"}} style="margin-bottom:25px;">
+              {{#if isEditing}}
+                {{edit-decision class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+              {{else}}
+                <label {{action "editDecision" on="doubleClick"}}>{{title}}</label>
+              {{/if}}
+              <br/>Yes Count: {{yesCount}} <button {{action "yesCountIncrement"}} class="yay">Yay</button>
+              <br/>No Count: {{noCount}} <button {{action "noCountIncrement"}} class="nay">Nay</button>
+          <br />
+              <button {{action "removeDecision"}} class="destroy">Delete</button>
+              </li>
+          {{/each}}
+      </ul>
+  </script>
+
+  <script src="js/bower_components/jquery/jquery.js"></script>
+  <script src="js/bower_components/handlebars/handlebars.js"></script>
+  <script src="js/bower_components/ember/ember.js"></script>
+  <script src="js/bower_components/ember-data/ember-data.js"></script>
+  <script src="js/bower_components/ember-localstorage-adapter/localstorage_adapter.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/models/decisions.js"></script>
+  <script src="js/controllers/decisions_controller.js"></script>
+  <script src="js/controllers/decision_controller.js"></script>
+  <script src="js/views/edit_decision_view.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>
