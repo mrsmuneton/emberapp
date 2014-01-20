@@ -1,7 +1,7 @@
 App.Decision = DS.Model.extend({
-  title: DS.attr(),
-  yesCount: DS.attr(),
-  noCount: DS.attr()
+  title: DS.attr('string'),
+  yesCount: DS.attr('number', { defaultValue: 0 }),
+  noCount: DS.attr('number', { defaultValue: 0 })
 });
 
 

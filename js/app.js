@@ -1,6 +1,5 @@
 App = Ember.Application.create();
 
-
 var useLocalStorage = confirm("Use the Local Storage Adapter?  If you choose Cancel, you will see the fixture data.");
 
 if(useLocalStorage){
