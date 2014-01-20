@@ -8,7 +8,7 @@ App.Decision = DS.Model.extend({
 App.Decision.FIXTURES = [
  {
    id: 1,
-   title: 'Vote yes or no and count the votes!',
+   title: 'Count yes or no votes!',
    yesCount: 0,
    noCount: 0
  },

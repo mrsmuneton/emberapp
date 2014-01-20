@@ -14,6 +14,7 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="decisions">
+      <div class="halfWidth">
       {{input type="text" id="new-decision" placeholder="Enter a voting topic."
       value=newTitle action="createDecision"}}
       <ul>
@@ -31,6 +32,11 @@
               </li>
           {{/each}}
       </ul>
+      </div>
+      <div class="halfWidth">
+          This sample ember.js app can connect to the Local Storage Data Adapter in which case your input will persist across page refreshes.<br /><br />
+          If you choose to view the fixture data, changes do not persist across page load.<br /><br />
+      </div>
   </script>
 
   <script src="js/bower_components/jquery/jquery.js"></script>

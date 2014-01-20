@@ -2,3 +2,9 @@
 .ember-application {
     margin: 20px;
 }
+
+.halfWidth {
+    width: 49%;
+    float: left;
+    display: inline;
+}

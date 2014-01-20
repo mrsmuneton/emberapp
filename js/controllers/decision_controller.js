@@ -30,19 +30,4 @@ App.DecisionController = Ember.ObjectController.extend({
             decision.save();
         }
     }
-/*
-    noCountIncrement: function(key, value){
-        var model = this.get('model');
-
-        if (value === undefined) {
-            // property being used as a getter
-            return model.get('noCount');
-        } else {
-            // property being used as a setter
-            model.set('noCount', value+1);
-            model.save();
-            return value;
-        }
-    }.property('model.noCount')
-*/
 });
